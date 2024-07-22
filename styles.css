@@ -10,6 +10,7 @@
     /* -----------------primary colors-------------------- */
     --soft-orange: #e9ab53;
     --soft-red: #f15e50;
+    --fade-red: #e6786e;
 
     /* --------------neutral colors------------------------- */
     --Off-white: #fffdfa;
@@ -44,6 +45,7 @@
     --small-weight: 400;
     --medium-weight: 700;
     --larger-weight: 800;
+    --thick-weight: 900;
 }
 
 /* ---------------------------------body----------------------------------- */
@@ -83,14 +85,21 @@ body{
     font-weight: var(--small-weight);
 }
 
+.nav__items a:hover{
+    cursor: pointer;
+    border-bottom: 2px solid var(--fade-red);
+    height: 6px;
+    width: 100%;
+    transition: 0.6s all;
+}
+
 /* --------------------------navigation end----------------------------------------- */
 
 /* ---------------------------------mid hero start-------------------------------------- */
 
 /* -----------left section start------------ */
 .left__hero{
-    margin-right: 1.3rem;
-    height: 90vh;
+    margin-right: 1.9rem;
 }
 
 .mid__hero{
@@ -98,8 +107,8 @@ body{
 }
 
 .hero-img{
-    height: 50vh;
     width: 100%;
+    object-fit: contain;
 }
 
 .info-section{
@@ -114,7 +123,7 @@ body{
 
 .future__text{
     font-size: var(--font-future);
-    font-weight: var(--larger-weight);
+    font-weight: var(--thick-weight);
     color: var(--Very-darkblue);
 }
 
@@ -122,6 +131,7 @@ body{
     width: 50%;
     font-size: var(--read-font);
     color: var(--Dark-grayishblue);
+    font-weight: var(--small-weight);
     line-height: 1.6rem;
     padding: var(--mid-padding);
     
@@ -132,7 +142,7 @@ body{
     font-weight: var(--larger-weight);
     font-size: var(--small-font);
     word-spacing: 0.1rem;
-    letter-spacing: 0.1rem;
+    letter-spacing: 0.2rem;
     text-transform: uppercase;
     padding: var(--btn-padding);
     height: 40px;
@@ -140,6 +150,19 @@ body{
     background-color: var(--soft-red);
     border: none;
     margin: 1rem 0 0 0;
+    width: 50%;
+}
+
+.see-more__button:hover{
+    cursor: pointer;
+    background-color: var(--Very-darkblue);
+    color: var(--Off-white);
+    transition: 0.5s ease all;
+}
+
+.see-more__button:active{
+    transform: scale(1.1);
+    transition: 0.5s;
 }
 
 
@@ -152,7 +175,6 @@ body{
     padding: var(--neutral-padding);
     background-color: var(--Very-darkblue);
     color: var(--Off-white);
-    height: 82vh;
 }
 
 h2{
@@ -170,6 +192,7 @@ h2{
 .info-new{
     color: var(--Dark-grayishblue);
     font-size: var(--read-font);
+    font-weight: var(--small-weight);
 }
 
 .line{
@@ -188,22 +211,26 @@ h2{
 .bottom-section{
     display: flex;
     align-items: center;
+    margin-top: 2rem;
+    gap: 5.4rem;
 }
 
 .number-img{
     width: 100px;
     height: 120px;
+    object-fit: contain;
     margin: 0 1rem 0 0;
 }
 
 .display{
     display: flex;
+    align-items: center;
+    width: 100%;
 }
-
+/* 
 .side-info{
-    display: block;
-    /* margin: 0 2rem 0 0; */
-}
+    
+} */
 
 .first{
     color: var(--soft-red);
@@ -214,13 +241,15 @@ h2{
 .reviving{
     color: var(--Very-darkblue);
     font-size: var(--read-font);
-    font-weight: var(--larger-weight);
+    font-weight: var(--thick-weightt);
     display: block;
+    line-height: 1.7rem;
 }
 
 .reviving-text{
     font-size: var(--read-font);
     color: var(--Dark-grayishblue);
+    line-height: 1.7rem;
 }
 
 /* ---------------------------------------bottom section end------------------------------------ */
